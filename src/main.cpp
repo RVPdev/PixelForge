@@ -1,9 +1,10 @@
 #include <raylib.h>
+#include "include/screen.h"
 
 int main()
 {
     // Initialize the window
-    InitWindow(1280, 720, "PixelForge");
+    Screen screen(1280,720, "Pixel Forge");
 
     // Make window resizable
     SetWindowState(FLAG_WINDOW_RESIZABLE);
@@ -13,6 +14,8 @@ int main()
     // main loop
     while (!WindowShouldClose())
     {
+        screen.Update();
+
         BeginDrawing();
         ClearBackground(BLACK);
         EndDrawing();
