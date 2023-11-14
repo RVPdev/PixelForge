@@ -1,4 +1,4 @@
-#include "Screen/screen.h"
+#include "include/screen.h"
 
 // Constructor: Initializes window with given size and title
 Screen::Screen(int width, int height, const char *title)
