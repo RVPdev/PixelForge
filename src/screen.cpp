@@ -4,8 +4,11 @@
 Screen::Screen(int width, int height, const char *title)
     : originalWidth(width), originalHeight(height), aspectRatio((float)width / height)
 {
+    minWidth = 1280;
+    minHeight = 720;
     InitWindow(width, height, title);
     SetWindowState(FLAG_WINDOW_RESIZABLE);
+    SetWindowMinSize(minWidth, minHeight);
 }
 
 // Destructor: Closes the window
